@@ -1,0 +1,22 @@
+[
+    {
+        "name" : "Reliance",
+        "price" : 1193.4,
+        "number" : 100
+    },
+    {
+        "name" : "Rcom",
+        "price" : 0.7,
+        "number" : 1000
+    },
+    {
+        "name" : "Tata Motors",
+        "price" : 118.35,
+        "number" : 250
+    },
+    {
+        "name" : "TCS",
+        "price" : 2215.95,
+        "number" : 50
+    }
+]

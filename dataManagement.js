@@ -1,3 +1,19 @@
+/******************************************************************************
+ * Execution    :   default node            terminal> node dataManagement.js
+ * 
+ * Purpose      :   To read input from JSON file and calculate the price of the
+ *                  grocery item and writing the result in another JSON file
+ * 
+ * @description
+ * 
+ * @file        :   dataManagement.js
+ * @overview    :   To read input from JSON file and calculate the price of the
+ *                  grocery item and writing the result in another JSON file
+ * @author      :   Karan Gupta
+ * @version     :   1.0
+ * @since       :   04-09-2019
+*******************************************************************************/
+
 const util = require('./utility/dataManagUtility');
 const fs = require('fs');
 const read = require('readline-sync');
