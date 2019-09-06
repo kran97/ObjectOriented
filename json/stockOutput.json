@@ -1,0 +1,22 @@
+[
+  {
+    "stockName": "Reliance",
+    "totalPrice": 119340.00000000001
+  },
+  {
+    "stockName": "Rcom",
+    "totalPrice": 700
+  },
+  {
+    "stockName": "Tata Motors",
+    "totalPrice": 29587.5
+  },
+  {
+    "stockName": "TCS",
+    "totalPrice": 110797.49999999999
+  },
+  {
+    "stockName": "Capgemini",
+    "totalPrice": 17055
+  }
+]

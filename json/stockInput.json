@@ -18,5 +18,35 @@
         "name" : "TCS",
         "price" : 2215.95,
         "number" : 50
+    },
+    {
+        "name" : "Capgemini",
+        "price" : 113.70,
+        "number" : 150
+    },
+    {
+        "name" : "Bajaj",
+        "price" : 2750.60,
+        "number" : 200
+    },
+    {
+        "name" : "Google LLP",
+        "price" : 86953.29,
+        "number" : 10
+    },
+    {
+        "name" : "Facebook",
+        "price" : 13629,
+        "number" : 20
+    },
+    {
+        "name" : "JPMC",
+        "price" : 8033.2,
+        "number" : 50
+    },
+    {
+        "name" : "Disney",
+        "price" : 9899,
+        "number" : 100
     }
 ]
