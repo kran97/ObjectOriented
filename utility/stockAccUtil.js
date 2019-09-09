@@ -10,6 +10,7 @@ class customStokeAcc
         this.time = null;
     }
 }
+var x=0;
 class stockAccount
 {
     constructor()
@@ -71,23 +72,21 @@ class stockAccount
                 console.log(err);
             }
         }
-        var i=0;
-        obj1[i] = new customStokeAcc();
-        obj1[i].name = name;
-        obj1[i].number = number;
-        obj1[i].price = price;
-        //var dat = new Date();
-        obj1[i].time = Date(Date.now());
+        obj1[x] = new customStokeAcc();
+        obj1[x].name = name;
+        obj1[x].number = number;
+        obj1[x].price = price;
+        obj1[x].time = Date(Date.now());
         var outString = JSON.stringify(obj1, null, 2);
         fs.writeFileSync('./json/stockTransaction.json', outString);
-        i++;
+        x++;
         
         console.log(content);
         console.log("*********************");
         console.log("USER's PORTFOLIO");
         console.log(userContent);
     }
-    sell(content, userContent)
+    sell(content, userContent, obj1)
     {
         var numDelStock;
         var delName = read.question("Enter the stock you wanna sell : ");
@@ -122,6 +121,16 @@ class stockAccount
                 console.log(err);
             }
         }
+
+        obj1[x] = new customStokeAcc();
+        obj1[x].name = delName;
+        obj1[x].number = numDelStock;
+        obj1[x].price = userContent[i].price;
+        obj1[x].time = Date(Date.now());
+        var outString = JSON.stringify(obj1, null, 2);
+        fs.writeFileSync('./json/stockTransaction.json', outString);
+        x++;
+
         console.log(content);
         console.log("*********************");
         console.log("USER's PORTFOLIO");

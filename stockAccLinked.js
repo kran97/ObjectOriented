@@ -15,26 +15,33 @@
  *                  stocks bought.
  * @author      :   Karan Gupta
  * @version     :   1.0
- * @since       :   07-09-2019
+ * @since       :   09-09-2019
 *******************************************************************************/
 
 const fs  = require('fs');                              //file-system
 const read = require('readline-sync');                  //user input library
-const utils = require('./utility/stockAccUtil');        //Utility file
+const utils = require('./utility/stockLinkedUtil');        //Utility file
 const obj1 = [];
 /**
- * @description : reading stock market file and parsing it
+ * @description : reading stock market file and parsing it and putting it in linked list
  */
 var data = fs.readFileSync('./json/stockInput.json','utf-8');
 var content = JSON.parse(data);
 console.log(content);
+var headMarket = new utils.node();
+var temp1 = headMarket;
+temp1.input(temp1, content);
+
+
 
 /**
  * @description : reading in user's portfolio and parsing it
  */
 var userData = fs.readFileSync('./json/userStockFile.json','utf-8');
 var userContent = JSON.parse(userData);
-
+var headPort = new utils.node();
+var temp2 = headPort;
+temp2.input(temp2, userContent);
 
 var obj = new utils.stockAccount();
 while(1)
@@ -48,10 +55,14 @@ while(1)
     switch(choice)
     {
         case '1':
-            obj.buy(content, userContent, obj1);
+            var tempMarket = headMarket;
+            var tempPort = headPort;
+            obj.buy(tempMarket, tempPort, obj1);
             break;
         case '2':
-            obj.sell(content, userContent, obj1);
+            var tempMarket = headMarket;
+            var tempPort = headPort;
+            obj.sell(tempMarket, tempPort, obj1);
             break;
         case '3':
             obj.write(content, userContent);
