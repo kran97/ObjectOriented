@@ -9,7 +9,7 @@ class stock
 }
 class stockDetails
 {
-    input(num)
+    input()
     {
         var content = fs.readFileSync('./json/stockInput.json','utf-8');
         var parContent = JSON.parse(content);
@@ -25,7 +25,9 @@ class stockDetails
         }
         for(var i=0; i<num; i++)
         {
-            console.log(obj[i].stockName + " : " + obj[i].totalPrice);
+            console.log("Stock name : " + obj[i].stockName);
+            console.log("Total price : " + obj[i].totalPrice);
+            console.log();
         }
         var outString = JSON.stringify(obj, null, 2);
         fs.writeFileSync('./json/stockOutput.json', outString);
@@ -35,8 +37,3 @@ module.exports = {
     stock,
     stockDetails
 }
-
-/**
- * number of stocks
- * 
- */

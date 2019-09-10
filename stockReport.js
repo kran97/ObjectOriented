@@ -19,9 +19,10 @@ const read = require("readline-sync");
 var obj1 = [];
 var obj2 = new stockUtils.stockDetails();
 var n = parseInt(read.question("Enter the number of stocks you'd like to see : "));
+console.log();
 try{
     if(n>=10 || isNaN(n) || n<0) throw 'Invalid Input'
-    var content = obj2.input(n);
+    var content = obj2.input();
     obj2.output(obj1, n, content);
 }
 catch(err)
